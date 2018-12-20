@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "ScreenRecorderLib"
+    </assembly>
+    <members>
+        <member name="P:ScreenRecorderLib.RecorderOptions.IsMp4FastStartEnabled">
+            <summary>
+Place the mp4 header at the start of the file. This makes the playback start faster when streaming. This option is only available when recording to a stream.
+</summary>
+        </member>
+        <member name="P:ScreenRecorderLib.RecorderOptions.IsHardwareEncodingEnabled">
+            <summary>
+Enable hardware encoding if available. This is enabled by default.
+</summary>
+        </member>
+        <member name="P:ScreenRecorderLib.RecorderOptions.IsLowLatencyEnabled">
+            <summary>
+Faster rendering, but can affect quality. Use when speed is more important than quality.
+</summary>
+        </member>
+        <member name="P:ScreenRecorderLib.RecorderOptions.IsThrottlingDisabled">
+            <summary>
+Disable throttling of video renderer. If this is disabled, all frames are sent to renderer as fast as they come. Can cause out of memory crashes.
+</summary>
+        </member>
+        <member name="P:ScreenRecorderLib.VideoOptions.IsFixedFramerate">
+            <summary>
+Send data to the video encoder every frame, even if it means duplicating the previous frame(s). Can fix stutter issues in fringe cases, but uses more resources.
+</summary>
+        </member>
+        <member name="P:ScreenRecorderLib.VideoOptions.IsMousePointerEnabled">
+            <summary>
+Display the mouse cursor on the recording
+</summary>
+        </member>
+        <member name="P:ScreenRecorderLib.VideoOptions.Bitrate">
+            <summary>
+Bitrate in bits per second
+</summary>
+        </member>
+        <member name="P:ScreenRecorderLib.VideoOptions.Framerate">
+            <summary>
+Framerate in frames per second.
+</summary>
+        </member>
+        <member name="M:ScreenRecorderLib.DisplayOptions.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+Select monitor to record via device name, e.g.\\.\DISPLAY1, and the rectangle to record on that monitor.
+</summary>
+        </member>
+        <member name="M:ScreenRecorderLib.DisplayOptions.#ctor(System.String)">
+            <summary>
+Select monitor to record via device name, e.g.\\.\DISPLAY1
+</summary>
+        </member>
+    </members>
+</doc>

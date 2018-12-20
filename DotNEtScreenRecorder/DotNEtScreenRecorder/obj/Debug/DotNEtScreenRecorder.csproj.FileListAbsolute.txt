@@ -1,0 +1,7 @@
+C:\Users\marzian\source\repos\DotNEtScreenRecorder\DotNEtScreenRecorder\bin\Debug\DotNEtScreenRecorder.exe.config
+C:\Users\marzian\source\repos\DotNEtScreenRecorder\DotNEtScreenRecorder\bin\Debug\DotNEtScreenRecorder.exe
+C:\Users\marzian\source\repos\DotNEtScreenRecorder\DotNEtScreenRecorder\bin\Debug\DotNEtScreenRecorder.pdb
+C:\Users\marzian\source\repos\DotNEtScreenRecorder\DotNEtScreenRecorder\obj\Debug\DotNEtScreenRecorder.csprojAssemblyReference.cache
+C:\Users\marzian\source\repos\DotNEtScreenRecorder\DotNEtScreenRecorder\obj\Debug\DotNEtScreenRecorder.csproj.CoreCompileInputs.cache
+C:\Users\marzian\source\repos\DotNEtScreenRecorder\DotNEtScreenRecorder\obj\Debug\DotNEtScreenRecorder.exe
+C:\Users\marzian\source\repos\DotNEtScreenRecorder\DotNEtScreenRecorder\obj\Debug\DotNEtScreenRecorder.pdb
