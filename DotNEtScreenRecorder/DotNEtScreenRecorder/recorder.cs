@@ -14,8 +14,38 @@ namespace DotNEtScreenRecorder
         Stream _outStream;
         public void CreateRecording()
         {
+            RecorderOptions options = new RecorderOptions
+            {
+                RecorderMode = RecorderMode.Video,
+                //If throttling is disabled, out of memory exceptions may eventually crash the program,
+                //depending on encoder settings and system specifications.
+                IsThrottlingDisabled = false,
+                //Hardware encoding is enabled by default.
+                IsHardwareEncodingEnabled = true,
+                //Low latency mode provides faster encoding, but can reduce quality.
+                IsLowLatencyEnabled = false,
+                //Fast start writes the mp4 header at the beginning of the file, to facilitate streaming.
+                IsMp4FastStartEnabled = false,
+                AudioOptions = new AudioOptions
+                {
+                    Bitrate = AudioBitrate.bitrate_128kbps,
+                    Channels = AudioChannels.Stereo,
+                    IsAudioEnabled = true
+                },
+                VideoOptions = new VideoOptions
+                {
+                    //BitrateMode = BitrateControlMode.UnconstrainedVBR,
+                    Bitrate = 8000 * 1000,
+                    Framerate = 60,
+                    IsMousePointerEnabled = true,
+                    IsFixedFramerate = true,
+                    EncoderProfile = H264Profile.Main
+                }
+            };
+
+
             string videoPath = Path.Combine(Path.GetTempPath(), "test.mp4");
-            _rec = Recorder.CreateRecorder();
+            _rec = Recorder.CreateRecorder(options);
             _rec.OnRecordingComplete += Rec_OnRecordingComplete;
             _rec.OnRecordingFailed += Rec_OnRecordingFailed;
             _rec.OnStatusChanged += Rec_OnStatusChanged;
